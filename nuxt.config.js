@@ -5,7 +5,7 @@ export default {
   buildModules: [colorModeModule],
   target: "static",
   head: {
-    title: "my website title",
+    title: "FUSSBALL MML GEGEN BAUM",
     meta: [
       { charset: "utf-8" },
       {
@@ -19,6 +19,6 @@ export default {
         content: "FUSSBALL MML"
       }
     ],
-    link: [{ rel: "icon", type: "image/x-icon", href: "/favicon.ico" }]
+    link: [{ rel: "icon", type: "image/png", href: "/favicon.png" }]
   }
 };
