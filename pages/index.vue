@@ -7,7 +7,7 @@
             v-for="matchDay in playedMatchDays"
             :value="matchDay"
             :key="matchDay.index"
-            >{{ matchDay }}
+            >{{ matchDay }}.
           </option>
         </select>
         Spieltag
@@ -147,6 +147,8 @@ table {
 }
 
 h2 {
+  display: grid;
+  grid-template-columns: 60px 1fr;
   margin: 0px;
   height: 30px;
 }
@@ -182,14 +184,22 @@ td {
   fill: aliceblue;
 }
 
-/* .btn span.icon {
-  background: url("../assets/sun.svg") no-repeat;
-  float: left;
-  height: 25px;
-  width: 25px;
-} */
-
 .btn span.isDarkTheme {
   background: url("../assets/sun.svg") no-repeat;
+}
+
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background: transparent;
+  background-image: url("data:image/svg+xml;utf8,<svg fill='white' height='24' viewBox='0 0 24 24' width='24' xmlns='http://www.w3.org/2000/svg'><path d='M7 10l5 5 5-5z'/><path d='M0 0h24v24H0z' fill='none'/></svg>");
+  background-repeat: no-repeat;
+  color: var(--color);
+  font-size: 21px;
+  line-height: normal;
+  font-weight: 700;
+  border: none;
+  width: 120%;
+  text-align-last: center;
 }
 </style>
