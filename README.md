@@ -6,9 +6,9 @@
 
 - [ ] write crawler
   - [ ] let it run after every matchday
-- [ ] theme toggle
+- [x] theme toggle
 - [x] select matchday on table
 - [x] calculate total donation per matchday
 - [ ] desktop layout
-- [ ] mobile layout
+- [x] mobile layout
 - [ ] combine both tables into 1

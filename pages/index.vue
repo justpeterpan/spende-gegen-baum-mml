@@ -1,14 +1,27 @@
 <template>
   <div>
-    <!-- <select v-model="$colorMode.preference">
-      <option value="system">System</option>
-      <option value="light">Light</option>
-      <option value="dark">{{ $colorMode.preference }}</option>
-    </select> -->
+    <nav>
+      <h2>
+        <select v-model="selected" @change="changeSelectedMatchDay($event)">
+          <option
+            v-for="matchDay in playedMatchDays"
+            :value="matchDay"
+            :key="matchDay.index"
+            >{{ matchDay }}
+          </option>
+        </select>
+        Spieltag
+      </h2>
+      <button class="btn" @click="toggleTheme">
+        <span
+          class="icon"
+          :class="{ isDarkTheme: $colorMode.value === 'dark' }"
+        ></span>
+      </button>
+    </nav>
 
     <div class="tables">
       <div>
-        <h2>🌳 Tabelle</h2>
         <table>
           <tbody v-for="(position, index) in baumTable" :key="position.rank">
             <tr :class="{ highlighted: hasToPay[index] }">
@@ -21,17 +34,6 @@
         </table>
       </div>
       <div>
-        <h2>
-          <select v-model="selected" @change="changeSelectedMatchDay($event)">
-            <option
-              v-for="matchDay in playedMatchDays"
-              :value="matchDay"
-              :key="matchDay"
-              >{{ matchDay }}
-            </option>
-          </select>
-          Spieltag
-        </h2>
         <table>
           <tbody
             v-for="(position, index) in selectedMatchDayTable"
@@ -87,6 +89,9 @@ export default {
     totalPay() {
       const timesToPay = this.hasToPay.filter(entry => entry);
       return timesToPay.length * 10;
+    },
+    isDarkTheme() {
+      return this.$colorMode.value === "dark" ? true : false;
     }
   },
   methods: {
@@ -105,10 +110,14 @@ export default {
       this.setHasToPayTotal();
     },
     changeSelectedMatchDay(e) {
-      console.log(e.target.value);
       this.setSelectedMatchDay(e.target.value);
       this.getSelectedMatchDayTable(e.target.value);
       this.setHasToPay(`${this.selectedMatchDay}`);
+    },
+    // $colorMode comes from @nuxtjs/color-mode
+    toggleTheme() {
+      this.$colorMode.value =
+        this.$colorMode.value === "dark" ? "light" : "dark";
     }
   },
   mounted() {
@@ -118,13 +127,21 @@ export default {
 </script>
 
 <style>
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px dotted var(--color);
+  padding: 10px 0;
+}
+
 .tables {
   display: grid;
   grid-template-columns: 1fr 1fr;
 }
 table {
   width: 100%;
-  padding: 20px 0;
+  padding: 10px 0;
   border-spacing: 0;
   border-collapse: separate;
 }
@@ -140,8 +157,8 @@ td {
 }
 
 .highlighted {
-  background-color: green;
-  color: white;
+  background-color: var(--color-secondary);
+  color: var(--bg-secondary);
 }
 
 .total_donation {
@@ -150,5 +167,29 @@ td {
   justify-content: space-between;
   border-top: 1px dotted var(--color);
   font-size: 30px;
+}
+
+.btn {
+  background: none;
+  border: none;
+}
+
+.btn span.icon {
+  background: url("../assets/moon.svg") no-repeat;
+  float: left;
+  height: 25px;
+  width: 25px;
+  fill: aliceblue;
+}
+
+/* .btn span.icon {
+  background: url("../assets/sun.svg") no-repeat;
+  float: left;
+  height: 25px;
+  width: 25px;
+} */
+
+.btn span.isDarkTheme {
+  background: url("../assets/sun.svg") no-repeat;
 }
 </style>
