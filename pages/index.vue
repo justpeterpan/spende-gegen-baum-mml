@@ -44,21 +44,18 @@
             >
               <th scope="row">{{ position.rank }}</th>
               <td>{{ position.team }}</td>
-              <td v-if="selectedMatchDayTable[index].hasToPay">
-                10 EUR
-              </td>
             </tr>
           </tbody>
         </table>
       </div>
     </div>
     <div class="total_donation">
-      <p>
+      <div>
         SPIELTAGSPENDE: <strong>{{ totalPay }} EUR</strong>
-      </p>
-      <p>
+      </div>
+      <div>
         GESAMTSPENDE: <strong>{{ hasToPayTotal * 10 }} EUR</strong>
-      </p>
+      </div>
     </div>
   </div>
 </template>
@@ -149,6 +146,7 @@ td {
 
 .total_donation {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   border-top: 1px dotted var(--color);
   font-size: 30px;
