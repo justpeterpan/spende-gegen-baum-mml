@@ -2,7 +2,11 @@
   <div>
     <nav>
       <h2>
-        <select v-model="selected" @change="changeSelectedMatchDay($event)">
+        <select
+          :class="{ isDarkTheme: $colorMode.value === 'dark' }"
+          v-model="selected"
+          @change="changeSelectedMatchDay($event)"
+        >
           <option
             v-for="matchDay in playedMatchDays"
             :value="matchDay"
@@ -192,12 +196,10 @@ select {
   -webkit-appearance: none;
   -moz-appearance: none;
   background: transparent;
-  background-image: url("data:image/svg+xml;utf8,<svg fill='white' height='24' viewBox='0 0 24 24' width='24' xmlns='http://www.w3.org/2000/svg'><path d='M7 10l5 5 5-5z'/><path d='M0 0h24v24H0z' fill='none'/></svg>");
+  background-image: url("data:image/svg+xml;utf8,<svg fill='212225' line='black' height='24' viewBox='0 0 24 24' width='24' xmlns='http://www.w3.org/2000/svg'><path d='M7 10l5 5 5-5z'/><path d='M0 0h24v24H0z' fill='none'/></svg>");
   background-repeat: no-repeat;
-  /* background-position-x: 100%; */
-  /* background-position-y: -5px; */
   color: var(--color);
-  font-size: 21px;
+  font-size: 20px;
   line-height: normal;
   font-weight: 700;
   border: none;
@@ -206,5 +208,9 @@ select {
   display: block;
   text-align-last: center;
   padding-left: 20px;
+}
+
+select.isDarkTheme {
+  background-image: url("data:image/svg+xml;utf8,<svg fill='white' line='black' height='24' viewBox='0 0 24 24' width='24' xmlns='http://www.w3.org/2000/svg'><path d='M7 10l5 5 5-5z'/><path d='M0 0h24v24H0z' fill='none'/></svg>");
 }
 </style>
