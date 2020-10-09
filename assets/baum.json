@@ -1,10 +1,10 @@
 [
   { "rank": 1, "team": "FC Bayern München" },
   { "rank": 2, "team": "Borussia Dortmund" },
-  { "rank": 3, "team": "Borussia M'gladbach" },
+  { "rank": 3, "team": "M'gladbach" },
   { "rank": 4, "team": "RB Leipzig" },
-  { "rank": 5, "team": "Bayer 04 Leverkusen" },
-  { "rank": 6, "team": "TSG 1899 Hoffenheim" },
+  { "rank": 5, "team": "Leverkusen" },
+  { "rank": 6, "team": "Hoffenheim" },
   { "rank": 7, "team": "Hertha BSC" },
   { "rank": 8, "team": "VfL Wolfsburg" },
   { "rank": 9, "team": "Eintrach Frankfurt" },
