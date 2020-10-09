@@ -1,7 +1,7 @@
 [
-  { "rank": 1, "team": "FC Bayern München (M, P)" },
+  { "rank": 1, "team": "FC Bayern München" },
   { "rank": 2, "team": "Borussia Dortmund" },
-  { "rank": 3, "team": "Borussia Mönchengladbach" },
+  { "rank": 3, "team": "Borussia M'gladbach" },
   { "rank": 4, "team": "RB Leipzig" },
   { "rank": 5, "team": "Bayer 04 Leverkusen" },
   { "rank": 6, "team": "TSG 1899 Hoffenheim" },
@@ -15,6 +15,6 @@
   { "rank": 14, "team": "SC Freiburg" },
   { "rank": 15, "team": "FC Schalke 04" },
   { "rank": 16, "team": "1. FC Union Berlin" },
-  { "rank": 17, "team": "VfB Stuttgart (N)" },
-  { "rank": 18, "team": "Arminia Bielefeld (N)" }
+  { "rank": 17, "team": "VfB Stuttgart" },
+  { "rank": 18, "team": "Arminia Bielefeld" }
 ]
