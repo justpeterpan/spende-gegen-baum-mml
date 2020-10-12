@@ -42,11 +42,10 @@
                 ><img
                   class="logo"
                   :src="require(`../assets/logos/${position.logo}.svg`)"
-                  alt=""/></span
-              ><span v-if="!isMobile" class="team">{{ position.team }}</span>
-              <span v-if="isMobile" class="team_short">{{
-                position.logo
-              }}</span>
+                  alt=""
+              /></span>
+              <div v-if="!isMobile" class="team">{{ position.team }}</div>
+              <div v-if="isMobile" class="team_short">{{ position.logo }}</div>
             </td>
           </tr>
         </tbody>
@@ -68,11 +67,10 @@
                 ><img
                   class="logo"
                   :src="require(`../assets/logos/${position.logo}.svg`)"
-                  alt=""/></span
-              ><span v-if="!isMobile" class="team">{{ position.team }}</span>
-              <span v-if="isMobile" class="team_short">{{
-                position.logo
-              }}</span>
+                  alt=""
+              /></span>
+              <div v-if="!isMobile" class="team">{{ position.team }}</div>
+              <div v-if="isMobile" class="team_short">{{ position.logo }}</div>
             </td>
           </tr>
         </tbody>
@@ -125,7 +123,6 @@ export default {
     },
     isMobile() {
       if (process.browser) {
-        console.log(window.innerWidth < 813 ? true : false);
         return window.innerWidth < 813 ? true : false;
       }
     }
@@ -200,6 +197,10 @@ tr.highlighted {
   color: var(--bg-secondary);
 }
 
+.team_short {
+  text-transform: uppercase;
+}
+
 .donations {
   margin: 10px;
   font-family: Roboto Slab, sans-serif;
@@ -213,10 +214,6 @@ tr.highlighted {
 .donations_item {
   display: flex;
   justify-content: space-between;
-}
-
-.team_short {
-  text-transform: uppercase;
 }
 
 .btn {
