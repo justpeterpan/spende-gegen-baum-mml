@@ -1,20 +1,18 @@
 <template>
   <div>
     <nav>
-      <h2>
-        <select
-          :class="{ isDarkTheme: $colorMode.value === 'dark' }"
-          v-model="selected"
-          @change="changeSelectedMatchDay($event)"
-        >
-          <option
-            v-for="matchDay in playedMatchDays"
-            :value="matchDay"
-            :key="matchDay.index"
-            >{{ matchDay }}. Spieltag
-          </option> </select
-        >Spieltag
-      </h2>
+      <select
+        :class="{ isDarkTheme: $colorMode.value === 'dark' }"
+        v-model="selected"
+        @change="changeSelectedMatchDay($event)"
+      >
+        <option
+          v-for="matchDay in playedMatchDays"
+          :value="matchDay"
+          :key="matchDay.index"
+          >{{ matchDay }}. Spieltag
+        </option>
+      </select>
 
       <button class="btn" @click="toggleTheme">
         <span
@@ -174,14 +172,6 @@ table {
   border-collapse: separate;
 }
 
-h2 {
-  font-family: Roboto Slab, sans-serif;
-  display: grid;
-  grid-template-columns: 60px 1fr;
-  margin: 0px;
-  height: 30px;
-}
-
 td {
   display: flex;
   align-items: center;
@@ -240,8 +230,8 @@ select {
   width: 100%;
   appearance: none;
   display: block;
-  text-align-last: center;
   padding-left: 20px;
+  margin: 0;
 }
 
 .table_header {
