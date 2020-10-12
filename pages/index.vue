@@ -191,7 +191,7 @@ td {
   padding: 20px 0;
   justify-content: space-between;
   border-top: 1px dotted var(--color);
-  font-size: 20px;
+  font-size: 21px;
 }
 
 .donations_item {
@@ -219,11 +219,13 @@ td {
 select {
   -webkit-appearance: none;
   -moz-appearance: none;
+  font-family: Roboto Slab, sans-serif;
   background: transparent;
   background-image: url("data:image/svg+xml;utf8,<svg fill='212225' line='black' height='24' viewBox='0 0 24 24' width='24' xmlns='http://www.w3.org/2000/svg'><path d='M7 10l5 5 5-5z'/><path d='M0 0h24v24H0z' fill='none'/></svg>");
   background-repeat: no-repeat;
+  background-position-y: 2px;
   color: var(--color);
-  font-size: 20px;
+  font-size: 21px;
   line-height: normal;
   font-weight: 700;
   border: none;
