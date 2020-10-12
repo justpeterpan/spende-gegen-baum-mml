@@ -44,8 +44,8 @@
                   :src="require(`../assets/logos/${position.logo}.svg`)"
                   alt=""
               /></span>
-              <div v-if="!isMobile" class="team">{{ position.team }}</div>
               <div v-if="isMobile" class="team_short">{{ position.logo }}</div>
+              <div v-else class="team">{{ position.team }}</div>
             </td>
           </tr>
         </tbody>
@@ -69,8 +69,8 @@
                   :src="require(`../assets/logos/${position.logo}.svg`)"
                   alt=""
               /></span>
-              <div v-if="!isMobile" class="team">{{ position.team }}</div>
               <div v-if="isMobile" class="team_short">{{ position.logo }}</div>
+              <div v-else class="team">{{ position.team }}</div>
             </td>
           </tr>
         </tbody>
@@ -122,7 +122,7 @@ export default {
       return this.$colorMode.value === "dark" ? true : false;
     },
     isMobile() {
-      if (process.browser) {
+      if (process.client) {
         return window.innerWidth < 813 ? true : false;
       }
     }
