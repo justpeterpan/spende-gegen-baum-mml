@@ -216,15 +216,12 @@ td {
   background: url("../assets/sun.svg") no-repeat;
 }
 
-input:focus {
-  outline: none !important;
-}
-
 select {
   -webkit-appearance: none;
   -moz-appearance: none;
   font-family: Roboto Slab, sans-serif;
   background: transparent;
+  outline: none;
   background-image: url("data:image/svg+xml;utf8,<svg fill='212225' line='black' height='24' viewBox='0 0 24 24' width='24' xmlns='http://www.w3.org/2000/svg'><path d='M7 10l5 5 5-5z'/><path d='M0 0h24v24H0z' fill='none'/></svg>");
   background-repeat: no-repeat;
   background-position-y: 2px;
