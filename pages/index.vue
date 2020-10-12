@@ -156,7 +156,7 @@ nav {
   background-color: var(--bg-secondary);
   align-items: center;
   justify-content: space-between;
-  padding: 20px;
+  padding: 20px 10px;
 }
 
 .tables {
