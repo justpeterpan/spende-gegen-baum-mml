@@ -1,0 +1,20 @@
+[
+    { "rank": 1, "team": "FC Bayern München", "hasToPay": true, "logo": "fcb" },
+    { "rank": 2, "team": "Hertha BSC", "hasToPay": false, "logo": "bsc" },
+    { "rank": 3, "team": "Borussia Dortmund", "hasToPay": false, "logo": "bvb" },
+    { "rank": 4, "team": "FC Augsburg", "hasToPay": false , "logo": "fca"},
+    { "rank": 5, "team": "RB Leipzig", "hasToPay": false, "logo": "rb" },
+    { "rank": 6, "team": "SC Freiburg", "hasToPay": false, "logo": "scf" },
+    { "rank": 7, "team": "Hoffenheim", "hasToPay": false, "logo": "tsg" },
+    { "rank": 8, "team": "Arminia Bielefeld", "hasToPay": false, "logo": "arminia" },
+    { "rank": 9, "team": "Eintrach Frankfurt", "hasToPay": true, "logo": "fra" },
+    { "rank": 10, "team": "Leverkusen", "hasToPay": false, "logo": "b04" },
+    { "rank": 11, "team": "VfL Wolfsburg", "hasToPay": false, "logo": "vw" },
+    { "rank": 12, "team": "1. FC Köln", "hasToPay": false, "logo": "1fc" },
+    { "rank": 13, "team": "VfB Stuttgart", "hasToPay": false, "logo": "vfb" },
+    { "rank": 14, "team": "1. FC Union Berlin", "hasToPay": false, "logo": "ub" },
+    { "rank": 15, "team": "1. FSV Mainz 05", "hasToPay": false, "logo": "m05" },
+    { "rank": 16, "team": "SV Werder Bremen", "hasToPay": false, "logo": "svw" },
+    { "rank": 17, "team": "M'gladbach", "hasToPay": false, "logo": "bmg" },
+    { "rank": 18, "team": "FC Schalke 04", "hasToPay": false, "logo": "s04" }
+  ]
