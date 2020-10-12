@@ -216,6 +216,10 @@ td {
   background: url("../assets/sun.svg") no-repeat;
 }
 
+input:focus {
+  outline: none !important;
+}
+
 select {
   -webkit-appearance: none;
   -moz-appearance: none;
