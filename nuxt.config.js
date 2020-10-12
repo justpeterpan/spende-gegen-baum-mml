@@ -19,6 +19,18 @@ export default {
         content: "FUSSBALL MML"
       }
     ],
-    link: [{ rel: "icon", type: "image/png", href: "/favicon.png" }]
+    link: [
+      { rel: "icon", type: "image/x-icon", href: "/favicon.ico" },
+      {
+        rel: "stylesheet",
+        href:
+          "https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@700&display=swap"
+      },
+      {
+        rel: "stylesheet",
+        href:
+          "https://fonts.googleapis.com/css2?family=Neuton:wght@400&display=swap"
+      }
+    ]
   }
 };

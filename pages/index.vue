@@ -16,6 +16,7 @@
         </select>
         Spieltag
       </h2>
+
       <button class="btn" @click="toggleTheme">
         <span
           class="icon"
@@ -24,43 +25,65 @@
       </button>
     </nav>
 
+    <div class="table_header">
+      <div class="table_title">🌳 Tabelle</div>
+      <div class="table_title">Realität</div>
+    </div>
+
     <div class="tables">
-      <div>
-        <table>
-          <tbody v-for="(position, index) in baumTable" :key="position.rank">
-            <tr :class="{ highlighted: hasToPay[index] }">
-              <th scope="row">{{ position.rank }}</th>
-              <td>
-                {{ position.team }}
-              </td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-      <div>
-        <table>
-          <tbody
+      <!-- 🌳 TABLE -->
+      <table>
+        <tbody>
+          <tr
+            v-for="(position, index) in baumTable"
+            :key="position.rank"
+            :class="{ highlighted: hasToPay[index] }"
+          >
+            <th scope="row">{{ position.rank }}</th>
+            <td>
+              <span
+                ><img
+                  class="logo"
+                  :src="require(`../assets/logos/${position.logo}.svg`)"
+                  alt=""/></span
+              ><span class="team">{{ position.team }}</span>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+
+      <!-- CURRENT MATCHDAY TABLE -->
+      <table>
+        <tbody>
+          <tr
             v-for="(position, index) in selectedMatchDayTable"
             :key="position.rank"
+            :class="{
+              highlighted: selectedMatchDayTable[index].hasToPay
+            }"
           >
-            <tr
-              :class="{
-                highlighted: selectedMatchDayTable[index].hasToPay
-              }"
-            >
-              <th scope="row">{{ position.rank }}</th>
-              <td>{{ position.team }}</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
+            <th scope="row">{{ position.rank }}</th>
+            <td>
+              <span
+                ><img
+                  class="logo"
+                  :src="require(`../assets/logos/${position.logo}.svg`)"
+                  alt=""/></span
+              ><span class="team">{{ position.team }}</span>
+            </td>
+          </tr>
+        </tbody>
+      </table>
     </div>
-    <div class="total_donation">
-      <div>
-        SPIELTAGSPENDE: <strong>{{ totalPay }} EUR</strong>
+
+    <div class="donations">
+      <div class="donations_item">
+        SKY TAGESTICKET:
+        <div>{{ totalPay }} €</div>
       </div>
-      <div>
-        GESAMTSPENDE: <strong>{{ hasToPayTotal * 10 }} EUR</strong>
+      <div class="donations_item">
+        DAUERKARTE:
+        <div>{{ hasToPayTotal * 10 }} €</div>
       </div>
     </div>
   </div>
@@ -135,7 +158,7 @@ nav {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  border-bottom: 1px dotted var(--color);
+  border-bottom: 1px solid var(--color-secondary);
   padding: 10px 0;
 }
 
@@ -145,12 +168,13 @@ nav {
 }
 table {
   width: 100%;
-  padding: 10px 0;
+  padding: 0 0 10px 0;
   border-spacing: 0;
   border-collapse: separate;
 }
 
 h2 {
+  font-family: Roboto Slab, sans-serif;
   display: grid;
   grid-template-columns: 60px 1fr;
   margin: 0px;
@@ -158,6 +182,8 @@ h2 {
 }
 
 td {
+  display: flex;
+  align-items: center;
   padding: 8px 4px;
   text-align: left;
 }
@@ -167,12 +193,18 @@ td {
   color: var(--bg-secondary);
 }
 
-.total_donation {
-  display: flex;
-  flex-wrap: wrap;
+.donations {
+  font-family: Roboto Slab, sans-serif;
+  border-bottom: 4px double var(--color);
+  padding: 10px 0;
   justify-content: space-between;
   border-top: 1px dotted var(--color);
-  font-size: 30px;
+  font-size: 20px;
+}
+
+.donations_item {
+  display: flex;
+  justify-content: space-between;
 }
 
 .btn {
@@ -208,6 +240,28 @@ select {
   display: block;
   text-align-last: center;
   padding-left: 20px;
+}
+
+.table_header {
+  border-bottom: 1px dotted var(--color);
+  font-size: 21px;
+  justify-items: stretch;
+  align-items: center;
+  font-weight: 700;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding: 10px 0;
+}
+
+.table_title {
+  font-family: Roboto Slab, sans-serif;
+}
+
+.logo {
+  height: 32px;
+  width: 32px;
+  padding-right: 10px;
+  margin-top: 4px;
 }
 
 select.isDarkTheme {
