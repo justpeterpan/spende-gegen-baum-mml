@@ -1,19 +1,15 @@
 :root {
   --color: #212225;
-  --color-primary: #158876;
   --color-secondary: #212225;
   --bg: #f3f5f4;
   --bg-secondary: #fff;
-  --border-color: #ddd;
 }
 
 .dark-mode {
   --color: #ebf4f1;
-  --color-primary: #41b38a;
   --color-secondary: #fdf9f3;
   --bg: #212225;
-  --bg-secondary: #071521;
-  --border-color: #0d2538;
+  --bg-secondary: #131416;
 }
 
 body {
@@ -21,7 +17,8 @@ body {
     Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   background-color: var(--bg);
   color: var(--color);
-  transition: background-color 0.3s;
+  transition: background-color 0.5s;
+  margin: 0;
 }
 a {
   color: var(--color-primary);

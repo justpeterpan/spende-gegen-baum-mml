@@ -11,10 +11,9 @@
             v-for="matchDay in playedMatchDays"
             :value="matchDay"
             :key="matchDay.index"
-            >{{ matchDay }}.
-          </option>
-        </select>
-        Spieltag
+            >{{ matchDay }}. Spieltag
+          </option> </select
+        >Spieltag
       </h2>
 
       <button class="btn" @click="toggleTheme">
@@ -75,7 +74,7 @@
         </tbody>
       </table>
     </div>
-
+    <!-- TODO update structure -->
     <div class="donations">
       <div class="donations_item">
         SKY TAGESTICKET:
@@ -156,16 +155,18 @@ export default {
 <style>
 nav {
   display: flex;
+  background-color: var(--bg-secondary);
   align-items: center;
   justify-content: space-between;
-  border-bottom: 1px solid var(--color-secondary);
-  padding: 10px 0;
+  padding: 20px;
 }
 
 .tables {
+  margin: 10px;
   display: grid;
   grid-template-columns: 1fr 1fr;
 }
+
 table {
   width: 100%;
   padding: 0 0 10px 0;
@@ -194,9 +195,10 @@ td {
 }
 
 .donations {
+  margin: 10px;
   font-family: Roboto Slab, sans-serif;
   border-bottom: 4px double var(--color);
-  padding: 10px 0;
+  padding: 20px 0;
   justify-content: space-between;
   border-top: 1px dotted var(--color);
   font-size: 20px;
@@ -243,6 +245,7 @@ select {
 }
 
 .table_header {
+  margin: 0 10px 10px 10px;
   border-bottom: 1px dotted var(--color);
   font-size: 21px;
   justify-items: stretch;
@@ -250,7 +253,7 @@ select {
   font-weight: 700;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  padding: 10px 0;
+  padding: 20px 0;
 }
 
 .table_title {
