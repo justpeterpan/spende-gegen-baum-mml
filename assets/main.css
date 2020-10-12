@@ -3,6 +3,7 @@
   --color-secondary: #212225;
   --bg: #f3f5f4;
   --bg-secondary: #fff;
+  --bg-alt: #e0e0e0;
 }
 
 .dark-mode {
@@ -10,6 +11,7 @@
   --color-secondary: #fdf9f3;
   --bg: #212225;
   --bg-secondary: #131416;
+  --bg-alt: rgba(255, 255, 255, 0.025);
 }
 
 body {

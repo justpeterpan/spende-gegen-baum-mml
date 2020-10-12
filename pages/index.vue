@@ -179,7 +179,11 @@ td {
   text-align: left;
 }
 
-.highlighted {
+tr:nth-child(even) {
+  background-color: var(--bg-alt);
+}
+
+tr.highlighted {
   background-color: var(--color-secondary);
   color: var(--bg-secondary);
 }
