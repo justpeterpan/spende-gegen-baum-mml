@@ -100,7 +100,7 @@ import matchDays from "../assets/matchDays.json";
 export default {
   data() {
     return {
-      selected: "3"
+      selected: "4"
     };
   },
   computed: {
@@ -142,6 +142,7 @@ export default {
       this.getSelectedMatchDayTable(`${this.selectedMatchDay}`);
       this.setHasToPay(`${this.selectedMatchDay}`);
       this.setHasToPayTotal();
+      this.setSelected;
     },
     changeSelectedMatchDay(e) {
       this.setSelectedMatchDay(e.target.value);

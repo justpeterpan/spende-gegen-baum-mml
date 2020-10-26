@@ -50,8 +50,8 @@ export const actions = {
   async getPlayedMatchDays({ commit }) {
     await commit("getPlayedMatchDays");
   },
-  setSelectedMatchDay({ commit }, matchDay) {
-    commit("setSelectedMatchDay", matchDay);
+  async setSelectedMatchDay({ commit }, matchDay) {
+    await commit("setSelectedMatchDay", matchDay);
   },
   async getSelectedMatchDayTable({ commit }, matchDay) {
     await commit("getSelectedMatchDayTable", matchDay);
