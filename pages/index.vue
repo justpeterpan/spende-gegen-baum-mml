@@ -87,6 +87,7 @@
         <div>{{ hasToPayTotal * 10 }} €</div>
       </div>
     </div>
+    <footer>no ads • no tracking • no bullshit</footer>
   </div>
 </template>
 
@@ -279,5 +280,16 @@ select {
 
 select.isDarkTheme {
   background-image: url("data:image/svg+xml;utf8,<svg fill='white' line='black' height='24' viewBox='0 0 24 24' width='24' xmlns='http://www.w3.org/2000/svg'><path d='M7 10l5 5 5-5z'/><path d='M0 0h24v24H0z' fill='none'/></svg>");
+}
+
+footer {
+  display: flex;
+  background-color: var(--bg-secondary);
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  bottom: 20;
+  width: 100%;
+  height: 100px; /* Height of the footer */
 }
 </style>
