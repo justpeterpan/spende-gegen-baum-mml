@@ -90,7 +90,7 @@
     { "rank": 8, "team": "Eintracht Frankfurt", "hasToPay": false, "logo": "fra" },
     { "rank": 9, "team": "Hoffenheim", "hasToPay": false, "logo": "tsg" },
     { "rank": 10, "team": "VfL Wolfsburg", "hasToPay": false, "logo": "vw" },
-    { "rank": 11, "team": "FC Augsburg", "hasToPay": false, "logo": "fca" },
+    { "rank": 11, "team": "FC Augsburg", "hasToPay": true, "logo": "fca" },
     { "rank": 12, "team": "1. FC Union Berlin", "hasToPay": false, "logo": "union" },
     { "rank": 13, "team": "SC Freiburg", "hasToPay": false, "logo": "scf" },
     { "rank": 14, "team": "Arminia Bielefeld", "hasToPay": false, "logo": "arminia" },
